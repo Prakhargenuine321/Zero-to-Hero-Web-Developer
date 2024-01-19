@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outlines</title>
+    <style>
+        .box{
+            border: 5px solid black;
+            outline: 10px solid red;
+            /* outline-offset: 20px; */ /*-->Uncomment this and see the difference after application of "offset" and we can't do this with border as it is an part of "border-box"*/
+            margin-top: 40px;
+            border-radius: 3px; /*same border radius will be applied to "outline"*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, eaque!
+    </div>
+</body>
+</html>

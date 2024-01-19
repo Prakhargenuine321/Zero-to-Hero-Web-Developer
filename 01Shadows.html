@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadows</title>
+    <style>
+        .box{
+            border: 2px solid black;
+            padding: 34px;
+            box-shadow: 10px 10px 15px 5px grey;
+            margin-bottom: 100px;
+        }
+        .text{
+            text-shadow: 10px 9px 2px grey;
+        }
+        .multi-shadow{
+            border: 2px solid black;
+            padding: 34px;
+            box-shadow: 10px 10px 1px 5px grey , 20px 20px 1px 5px rgb(157, 243, 137) , 30px 30px 1px 5px rgb(245, 190, 123);
+            margin-bottom: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Hello I am the one of the best programmer on earth.
+    </div>
+    <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia, illo veniam quod tenetur eaque odit. Totam excepturi ipsam aliquid natus?</p>
+    <!--Adding mutliple shadows in .multi-shadow-->
+    <div class="multi-shadow">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, eveniet!
+    </div>
+</body>
+</html>

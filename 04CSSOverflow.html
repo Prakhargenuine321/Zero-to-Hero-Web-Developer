@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Overflow</title>
+    <style>
+        .box{
+            width: 20vw;
+            height: 40vh;
+            border: 2px solid black;
+            /* white-space:nowrap; uncomment this to understant */
+            overflow: scroll;
+            text-overflow: ellipsis;
+            /* overflow:hidden auto;  uncomment this to use shorthand of overflow-x and overflow-y*/
+        }
+    </style>
+</head>
+<body>
+    <!-- jab bhi content jyada ho par container(div) chota pad jaye toh usko manage karne ke liyae "Overflow" ka use kartae hain -->
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex cupiditate iure, impedit amet voluptas ullam cumque qui, quibusdam aperiam, veniam voluptate iusto quas nisi ad repellendus doloremque repudiandae error ipsa consectetur explicabo aut. Ea iure deleniti enim velit, sunt eaque voluptates voluptate voluptatibus possimus dicta nostrum, blanditiis facilis iste cum veniam debitis. Accusamus laudantium incidunt distinctio architecto iure reiciendis obcaecati alias dolorem tempore quibusdam recusandae, similique pariatur fuga deleniti quasi libero itaque, debitis aut quis. Ut quo labore ab enim modi incidunt aut excepturi neque libero? Consequuntur maxime, facere blanditiis vero architecto, aut reprehenderit consectetur perspiciatis mollitia, quas sunt assumenda!
+    </div>
+</body>
+</html>
