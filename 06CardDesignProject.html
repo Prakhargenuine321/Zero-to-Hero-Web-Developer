@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Design Project</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 325px;
+            height: 575px;
+            position:relative;
+            top: 100px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            /* border:2px solid grey; */
+            border-radius: 25px;
+            box-shadow: -1px 1px 20px 7px #8e8e96;
+        }
+        .image-main{
+            width: 319px;
+            height: 276px;
+            margin: 0 auto;
+            padding: 6px;
+            border: none;
+            border-radius: 25px;
+            object-fit: cover;
+        }
+        .tag-container{
+            display: flex;
+        }
+        .tag{
+            border: 1px solid rgb(192, 191, 191);
+            margin: 15px 1px 15px 25px;
+            padding: 5px 15px;
+            border-radius: 15px;
+            color: rgb(141, 138, 138);
+        }
+        .tag1{
+            border: 1px solid rgb(192, 191, 191);
+            margin: 15px 1px 15px 10px;
+            padding: 5px 15px;
+            border-radius: 15px;
+            color: rgb(141, 138, 138);
+        
+        }
+        .heading{
+            font-size: 26px;
+            font-weight: 600;
+            font-family: sans-serif;
+            margin-left:15px ;
+        }
+        .description{
+            color: #8e8e96;
+            font-size: 14px;
+            font-family: sans-serif;
+            margin: 15px;
+        }
+        .btn{
+            position: relative;
+            margin: 0 auto;
+            border: none;
+            border-radius:25px ;
+            background-color: #93c6f9d4;
+            padding: 12px 18px;
+            color: #007dfa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="./Images/jonathan-kemper-t6Wmvbw_MdI-unsplash.jpg" alt="" class="image-main">
+        <div class="tag-container">
+            <div class="tag">
+                Nature
+            </div>
+            <div class="tag1">
+                Lake
+            </div>
+        </div>
+        <p class="heading">Tech Inclination!</p>
+        <p class="description">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere similique atque expedita saepe. Numquam, sunt earum iusto voluptas, nihil adipisci neque ipsam non commodi accusamus, odit eum obcaecati corporis aspernatur!
+        </p>
+        <div class="btn">
+            Read More
+        </div>
+    </div>
+</body>
+</html>
