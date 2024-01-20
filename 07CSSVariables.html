@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <style>
+        /* this is the way to declare variables for CSS-->*/
+        :root{ 
+            --color:rgb(73, 247, 253);
+            --seccolor:rgb(243, 184, 58);
+            /* we can also declare size units to use it again and again */
+            --margin:10px;
+            --defop:0.7;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .nav{
+            background: var(--color);
+        }
+        ul{
+            display: flex;
+        }
+        ul li{
+            opacity: var(--defop);
+            list-style: none;
+            padding: 30px;
+        }
+        ul li:first-child{
+            /* over-riding the property of global variable defined in root but this will behave as local variable -->*/
+            --color:rgb(163, 73, 253);
+            /* we can also assign another global variable to it--> */
+            /* --color:var(--seccolor); */
+
+            /* yahan par humnae aek aur color isliye diya hai jisse agar vo variable na mile toh dusra coolor access ho jaye--> */
+            background-color: var(--color , blue);
+        }
+        p{
+            background-color: var(--seccolor);
+            margin-top: var(--margin);
+        }
+    </style>
+</head>
+<body>
+     <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+     </div>
+     <p>
+         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum alias ea modi? Vero sint recusandae at incidunt voluptatum optio consequuntur? Laudantium dolorem odio harum atque numquam est dolores. Accusantium, quaerat.m
+     </p>
+</body>
+</html>
