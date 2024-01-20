@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultiColor Navbar</title>
+    <style>
+        /*Uncomment and one by one and see the magic-->*/
+        /* :root{
+            --primary-color:rgba(33, 63, 51, 0.842);
+            --secondary-color:#fff;
+        } */
+        /* :root{
+            --primary-color:rgba(57, 34, 75, 0.842);
+            --secondary-color:#fff;
+        } */
+        :root{
+            --primary-color:rgba(99, 53, 83, 0.842);
+            --secondary-color:#fff;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .nav{
+            display: flex;
+            justify-content: space-between;
+            width: 100vw;
+            height: 60px;
+            background-color: var(--primary-color);
+        }
+        .name{
+            font-size: 20px;
+            margin: 18px;
+            /*Uncomment below one to override the value of global variable*/
+            /* --secondary-color:black; */
+            color: var(--secondary-color);
+        }
+        .list1{
+            display: flex;
+            margin:18px;
+        }
+        .list1 li{
+            list-style: none;
+        }
+        .list1 li a{
+            text-decoration: none;
+            color:var(--secondary-color);
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <p class="name">Prakhar</p>
+        <ul class="list1">
+            <li><a href="./06CardDesignProject.html">Home</a></li>
+            <li><a href="./06CardDesignProject.html">About Us</a></li>
+            <li><a href="./06CardDesignProject.html">Contact</a></li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box{
+            display: flex;
+        }
+
+        .boxes{
+            height: 300px;
+            width: 300px;
+            background-color:green;
+            margin: 5px;
+        }
+
+        .box1{
+            display: flex;
+        }
+
+        .boxes1{
+            height: 300px;
+            width: 300px;
+            background-color:rgb(82, 20, 169);
+            margin: 5px;
+        }
+
+        @media screen and (max-width:460px) {
+            .box{
+                flex-direction: column;
+            }
+        }
+        @media screen and (orientation:portrait){
+            .box1{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="boxes"></div>
+        <div class="boxes"></div>
+        <div class="boxes"></div>
+    </div>
+    <div class="box1">
+        <div class="boxes1"></div>
+        <div class="boxes1"></div>
+        <div class="boxes1"></div>
+    </div>
+</body>
+</html>
