@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Float And Clear</title>
+    <style>
+        .card{
+            border: 2px solid black;
+            display: flow-root;
+        }
+        img{
+            /* image right maein aa jayegi aur bacha hua content left maein aa jayega */
+            float:right;
+        }
+        .cards{
+            border: 2px solid red;
+        }
+        .cards1{
+            background-color: rgb(235, 102, 124);
+            /* clear decide karta hai ki given element kae kis side par doosra element "float" karega ya nahi ya dono side par float nahi karana hai--> */
+            clear:right;
+        }
+    </style>
+</head>
+<body>
+    <!-- float property paehele bahut use hoti thi jab newspaper aur article ki tarah website hoti thi but iski knowledge hona jaruri hai. -->
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" width="290">
+        <div class="cards">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, eum, doloremque accusamus fugit debitis qui ad natus quibusdam ipsum pariatur quis atque, sunt labore nihil veniam eos commodi laboriosam. Et vero dolore dicta debitis.</div>
+        <div class="cards cards1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat dolores dolor consequatur iste perferendis rem nihil, alias quod vitae aut nemo inventore commodi provident? Magnam, pariatur. Maiores beatae odio eius temporibus cumque? Alias tenetur id non reiciendis, voluptatem in, fugiat dolorum dolore cumque numquam vitae expedita et ullam veniam libero ut iure inventore praesentium? Magnam ipsum saepe odit nobis iure debitis cum deleniti, ut eveniet praesentium aspernatur! Iure consequuntur, accusamus aliquam repudiandae modi amet tenetur asperiores sint obcaecati inventore nemo aperiam sit nulla laboriosam dolores veniam soluta nesciunt cupiditate dolorum perferendis itaque numquam aut. Culpa deserunt pariatur praesentium soluta quisquam quam! Facere nobis vitae expedita odit nihil ipsam est! Ullam porro voluptatem reprehenderit doloribus labore. Nostrum praesentium obcaecati voluptas at quae nesciunt maiores ipsum pariatur, repellat inventore et quam aliquam corrupti distinctio nihil voluptates quis non perspiciatis nam. Eum corrupti, sapiente magnam magni cumque perspiciatis dicta dignissimos nihil itaque error obcaecati aperiam rerum soluta esse voluptatibus animi, iste quae recusandae id expedita excepturi eaque! Placeat sequi error voluptatem et quaerat? Magni, porro atque. Dicta voluptatibus voluptates velit hic reprehenderit atque minima ipsam est suscipit culpa maiores fugiat dignissimos quo cum natus sunt doloribus, corporis dolorem, in eum. Dicta illo sit recusandae itaque modi sequi corporis, officia placeat vel illum quisquam maxime adipisci aperiam ea. Consequuntur, possimus sequi culpa provident a ab optio vel dolore recusandae deserunt quo odio, numquam cupiditate. Repudiandae id atque voluptas nihil totam provident ipsum soluta ex obcaecati natus accusamus, quis illum quam repellendus velit quasi blanditiis laboriosam amet fugit! Voluptatum ratione aliquid suscipit animi veritatis sit. Molestiae numquam, facere excepturi dolore magnam voluptates quaerat commodi amet, nostrum eaque incidunt facilis necessitatibus cupiditate aspernatur voluptas mollitia exercitationem sit est praesentium architecto at odit delectus? Corrupti voluptatibus nisi ullam. Nemo consequuntur omnis facilis nisi ducimus alias, est iure! Suscipit eligendi aperiam et, temporibus fugiat harum dolorem deserunt laborum neque nisi, aut cumque minus ducimus, inventore doloribus! Ipsam voluptatum deserunt pariatur quo, mollitia corporis molestias atque repudiandae. Iste, obcaecati? Harum, excepturi distinctio?</div>
+        <div class="cards">Card3</div>
+    </div>
+</body>
+</html>

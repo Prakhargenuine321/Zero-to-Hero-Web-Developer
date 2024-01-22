@@ -40,26 +40,53 @@
         }
         .list1{
             display: flex;
-            margin:18px;
+            margin:20px;
         }
         .list1 li{
             list-style: none;
         }
         .list1 li a{
             text-decoration: none;
+            --secondary-color:black;
             color:var(--secondary-color);
             padding: 10px;
+            background-color: #fff;
+            margin-left: 10px;
+            border-radius: 12px;
         }
+        .nav2{
+            --primary-color:rgb(239, 53, 122);
+            background-color:var(--primary-color);
+            width: 100vw;
+            height: 40px;
+        }
+        .change-color{
+           margin: 7px 19px;
+           padding: 5px 10px;
+           border: none;
+           border-radius: 8px;
+           background-color: rgb(117, 195, 251);
+           color: rgb(23, 70, 146);
+        }
+        /* Just commented uncomment karke daekh sakte ho kyunki isi ko humnae JS maien kiya hai wahan ja kar check kar lo*/
+        /* .home:hover{
+            background-color: black;
+            color: #fff;
+        } */
     </style>
 </head>
 <body>
     <div class="nav">
         <p class="name">Prakhar</p>
         <ul class="list1">
-            <li><a href="./06CardDesignProject.html">Home</a></li>
+            <li><a href="./06CardDesignProject.html" class="home">Home</a></li>
             <li><a href="./06CardDesignProject.html">About Us</a></li>
             <li><a href="./06CardDesignProject.html">Contact</a></li>
         </ul>
     </div>
+    <div class="nav2">
+        <button class="change-color">Change</button>
+    </div>
+    <script src="./JS/09MultiColorNav.js"></script>
 </body>
 </html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>More on CSS Selectors</title>
+    <style>
+      /* universal slector for an particular element or say hum issae kisi element kae saare child elements ko aek saath select kar sakte hain--> */
+      .boxes * {
+        color: blue;
+        border: 2px solid black;
+      }
+      /* following method ko hum conditional ki tarah daekh sakte hain jahan par hum kai elements par aek saath yahi condition laga sakte hain (Uncomment kar ke check karo)-->*/
+      /* p,a,.box,[data-color="primary"]{
+            padding-top: 45px;
+        } */
+
+      /* toh chalo aek aur method daekhtae hain jisae hum bahut hi uniqely daekhtae hain yahan par hum kisi class kae elements par arithmetically bhi laga sakte hain (Uncomment kar ke check karo)--> */
+      /* .box:nth-child(even){
+            background-color: aqua;
+        } */
+      .box:nth-child(odd) {
+        background-color: aqua;
+      }
+      /* hum yahan par last-child sae bhi select kar sakte hain */
+      /* isi tarah baaki ko bhi explore karo apni taraf sae */
+      .box:nth-last-child(3) {
+        background-color: pink;
+      }
+      /* humm CSS ki help sae dynamically bhi change kar sakte hain content as below -->*/
+      .boxes::before {
+        content: "This is content added using 'before' property ";
+        color: blue;
+      }
+      /*Daekha tumnae difference-->*/
+      .box::after {
+        content: "This is content added using 'after' property";
+        color: red;
+      }
+      /* daekh lo "selection" property bhi sirf '::before' '::after' waale elements ko select nhi kar payega-->*/
+      ::selection {
+        color: aqua;
+        background-color: #fff;
+      }
+      /* see the magic below-->*/
+      .box::first-letter {
+        color: #fff;
+        font-size: 45px;
+      }
+      input::placeholder {
+        color: rgb(126, 122, 131);
+      }
+      input {
+        outline: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 0.2rem 0.5rem;
+        margin-top: 10px;
+      }
+
+      input:focus {
+        border-color: #2563eb;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="boxes">
+      <div class="box" data-color="primary">I am First</div>
+      <div class="box">I am Second</div>
+      <div class="box">I am Third</div>
+      <input type="text" placeholder="Your Name" />
+    </div>
+  </body>
+</html>
