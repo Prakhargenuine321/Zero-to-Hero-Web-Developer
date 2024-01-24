@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grids Part-2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100%;
+            width: 100%;
+        }
+        .container{
+            height: 100%;
+            width: 100%;
+            background: rgb(52, 50, 50);
+            display: grid;
+            grid-template-columns: repeat(3,200px);
+            grid-template-rows: repeat(4,250px);
+            gap: 0.4rem;
+            padding: 4rem;
+            border: 2px solid white;
+            /* "justify-items" ka use hum container level par karte hain  jissae uske andar saare cells maein aek saath "horizontal-alignment" apply ki ja sake saare items w.r.t apni-apni cell place ho jayeinge*/
+            justify-items: center;
+
+            /* "align-items" ka use hum container level par karte hain  jissae uske andar saare cells maein aek saath vertical-alignment apply ki ja sake saare items w.r.t apni-apni cell place ho jayeinge*/
+            align-items: center;
+
+            /* ab agar hum 'horizontally' and 'vertically' dono aek saath use karna chahte hain then use 'place-items' (Uncomment to understand) -->*/
+            /* place-items: center; */
+        }
+        .item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            height: 100px;
+            width: 100px;
+            background-color: rgb(32,109,109);
+            border: 3px solid rgb(217,202,202);
+            /* justify-self ka use karte hain "horizontally-align" karne kae liye w.r.t cell of an grid*/
+            /* agar humnae custom 'height' and 'width' nahi di hai toh hum 'justify-self' maein 'stretch' ka bhbi use kar sakte hain so that item will be stretched and cover whole column (Uncomment below and comment given 'height' and 'width' to see magi)*/
+            /* justify-self: stretch ; */
+            /* justify-self: end ; */
+
+            /* align-self ka use karet hain "vertically-align" karne kae liye w.r.t cell of an grid (Uncomment to understand) -->*/
+            /* align-self:center; */
+
+            /* ab agar hum 'horizontally' and 'vertically' dono aek saath use karna chahte hain then use 'place-self' (Uncomment to understand) -->*/
+            /* place-self: center; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+    </div>
+</body>
+</html>

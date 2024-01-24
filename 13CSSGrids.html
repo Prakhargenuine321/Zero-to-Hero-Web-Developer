@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grids</title>
+    <style>
+        /* <-----kuch properties khud sae bhi explore karein-----> */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: 100%;
+        }
+        .container{
+            height: 100%;
+            width: 100%;
+            background-color:rgb(59,57,57);
+            /* adding a grid and using it */
+            /*agar verify karna hai ki grid add hua ya nahi toh "inspect" karo aur click karo "grid" kae option par tumhaein "row-no." and "column-no." dikhayega*/
+            display: grid;
+            padding: 4rem;
+            row-gap: 1rem;
+            column-gap: 1rem;
+            /* shorthand property for gap */
+            /* gap: 1rem; */
+
+            /*Ab hum 2d matrix ki form maein design kareingae as, 2*3 = 6, it means 6 items in 2*3 matrix form*/
+            /* these are all as measure of rows(as height) and columns(as width)  (Uncomment if commented)*/
+
+            /* #1 in normal units */
+            /* grid-template-rows: 200px 200px; */
+            /* grid-template-columns: 100px 200px 50px; */
+
+            /* #2 in "fractional-units" */
+            /* grid-template-columns:1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr; */
+
+            /* but hum baar aisae thoadi na likhaengae so uskae liye following method ka use karo */
+            grid-template-rows:repeat(4,1fr) ;
+            grid-template-columns:repeat(3,1fr);
+        }
+        .item{
+            background-color: rgb(94,94,194);
+            border: 2px solid black;
+            /* ab yahan se tum sikhoge ki kaise hum (grid+flex) ka combination use kareainge see from below*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+        }
+        /* ab hum grid ki responsive behaviour par work kareinge */
+        @media screen and (min-width:500px) {
+          /* ab maan lo humara mann badal gaya aur hum chate hain ki #item1 haumra completely stretch ho jaye aur nav ki tarah dikhe and same for #item6 to treat it as footer (Unccmment if commented) */
+          .header{
+            grid-column-start: 1;
+            grid-column-end: 4;
+            /*but aek problem aayi hogi kunki humnae numbe rof rows 3 declare ki hain but after implementing above line wahan containers shift hokar 3rd maein pahunch jayeinge so at line number 39 '2' ko '3' kiya hai*/
+        }
+        .footer{
+            grid-column-start: 1;
+            grid-column-end: 4;
+            /*Phir wahi problem aayegi so ab line 39 maein '3' ko '4' karna padega*/
+        }
+        .side-bar{
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+
+        .content{
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+        }
+        /* yahan par humnae container ko responsive banaya hai--> */
+        @media screen and (max-width:500px) {
+            .container{
+                grid-template-rows:repeat(6,1fr) ;
+                grid-template-columns:repeat(1,1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item header">Header</div>
+        <div class="item side-bar">SideBar</div>
+        <div class="item content">Content</div>
+        <div class="item">Hain</div>
+        <div class="item">Aap</div>
+        <div class="item footer">Footer</div>
+    </div>
+</body>
+</html>
