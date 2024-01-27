@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animations in CSS</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-color: beige;
+        border: 5px solid black;
+      }
+      .box {
+        width: 200px;
+        height: 150px;
+        background-color: rgb(94, 94, 224);
+        border-radius: 50px;
+        margin: 10px;
+        border: 4px solid black;
+
+        /* jis par animation lagega uski position define honi chahiye because by-default position is static */
+        position: relative;
+
+        /* declaring animation-name */
+        /* animation-name: rightMovement; */
+
+        /* "animation-duration: ;"-->defines the time taken between source to destination */
+        /* animation-duration: 5s; */
+
+        /* animation-iteration-count: ;-->defines how many times animation will run */
+        /* animation-iteration-count: 2; */
+
+        /* animation-delay: ;-->animation start karne se pahle kitna rukna hai */
+        /* animation-delay: 2s; */
+
+        /* we can control animation speed curve by using animation-timing-function: ; there are lot value option as per requirement */
+        /* if you want it custom then use "cubic-beizer:;-->go on borwser and get value from there"*/
+        /* animation-timing-function:linear; */
+
+        /* agar hum chahte hain ki box destination par jakar cut na ho balki waapas aaye toh use "animation-direction: ;" */
+        /* animation-direction: alternate; */
+
+        /* by using animation-fill-mode: ; we can decide first frame se pahle aur last frame ke baad kya karna hai (Uncomment to see the behaviour) */
+        /* animation-fill-mode:both; */
+
+        /* we can use animation-play-state: ; to set the state of an element as pause or resume */
+        /* animation-play-state:running; */
+
+        /* we can also use shorthand properties to avoid such a big code-->(Uncomment below and comment all other properties) */
+        /* pattern for shirthand--> animation: duration | easing-function | delay | iteration-count | direction | fill-mode | play-state | name */
+        animation: 5s linear 2s 4 alternate both rightMovement;
+      }
+
+      /* defining animation here */
+      @keyframes rightMovement {
+        /* source position inside "from" */
+        from {
+          top: 0;
+          left: 0;
+        }
+        /* destination position inside "to" */
+        to {
+          top: 0;
+          left: 1250px;
+        }
+      }
+
+      .box1 {
+        width: 200px;
+        height: 150px;
+        background-color: rgb(94, 94, 224);
+        border-radius: 50px;
+        margin: 10px;
+        border: 4px solid black;
+        position: absolute;
+        animation: 5s linear 2s 4 alternate both leftMovement;
+      }
+      @keyframes leftMovement {
+        /* source position inside "from" */
+        from {
+          top: 550px;
+          left: 1250px;
+        }
+        /* destination position inside "to" */
+        to {
+          top: 550px;
+          left: 0;
+        }
+      }
+
+      .circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        background-color: rgb(224, 191, 94);
+        border-radius: 50px;
+        /* margin: 10px; */
+        border: 2px solid black;
+        position: absolute;
+        top: 40%;
+        left: 45%;
+        animation: 5s linear 2s 4 alternate both circleMovement;
+      }
+      @keyframes circleMovement {
+        0% {
+          top: 21.7%;
+          left: 3%;
+        }
+        30% {
+          top: 21.7%;
+          left: 90%;
+        }
+        60% {
+          top: 63%;
+          left: 10%;
+        }
+        100% {
+          top: 63%;
+          left: 90%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box"></div>
+      <div class="circle"></div>
+      <div class="box1"></div>
+    </div>
+  </body>
+</html>

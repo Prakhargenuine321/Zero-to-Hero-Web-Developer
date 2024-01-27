@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition in CSS</title>
+    <style>
+        /*------- agar isse jyada tumhe janana hai toh refer 'mdn-reference' and also 'w3school' -------*/
+
+        /*Transition--> from one state to another state (it is single switch) but animation is sequence of these transitions */
+
+        /* we can apply transition to particular property of element and also to all properties  */
+
+        /*To see tarnsition we have to apply "pseudo-properties" over element*/
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            background-color: yellow;
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color: rgb(250, 179, 0);
+
+            /* "transition" over particular property */
+            /* transition-property: width; */
+
+            /* "tarnsition" to all properties */
+            /* transition-property: all;
+
+            transition-duration: 1s;
+            transition-delay: 1s;
+            transition-timing-function: ease-in-out; */
+
+            /* "tarnsition" over multiple elements also here shorthand property*/
+            /* transition: property-name | duration | easing-function |delay ; */
+            transition: width 2s , height 5s;
+        }
+
+        .box:hover{
+            width: 200px;
+            height: 400px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+</body>
+</html>
