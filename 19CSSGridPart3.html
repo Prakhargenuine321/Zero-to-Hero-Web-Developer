@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Part-3</title>
+    <style>
+        /* here we are learning about how make CSS Grid responsive becuase always applying 'media-queries' makes code bigger so we use some properties for Grid */
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+            background-color: rgb(241, 243, 125);
+        }
+        .container{
+            width: 100%;
+            height: 100%;
+            padding: 4rem;
+            display: grid;
+            gap: 1rem;
+            background-color: rgb(211, 150, 255);
+            /* grid-template-columns: repeat(3,1fr); */
+
+            /* but by using above one it is not responsive and better way is as following */
+            /* here 'auto-fit' means apne hisaab sae dekh lo but box ka size 'minimum:250px' aur 'maximum:400px' hona chahiye */
+            grid-template-columns:repeat(auto-fill , minmax(250px , 400px));
+            justify-content: center;
+
+            /* difference between 'auto-fill' and 'auto-fit' is: --> */
+            /* The auto-fit and the auto-fill are both properties of the CSS-Grid and are used to create responsive layouts without using media query in which the auto-fill property will allow empty spaces in a row whereas in the auto-fit property the content will stretch itself that it can fill the row entirely. */
+
+        }
+        .item{
+            padding: 1rem;
+            color: white;
+            border: 3px solid black;
+            background-color: rgb(253, 163, 178);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+        <div class="item">K</div>
+        <!-- <div class="item">L</div>
+        <div class="item">M</div>
+        <div class="item">N</div>
+        <div class="item">O</div>
+        <div class="item">P</div> -->
+    </div>
+</body>
+</html>
