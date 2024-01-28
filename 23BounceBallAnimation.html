@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bounce Ball Animation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100%;
+            width: 100%;
+            background-color: rgb(71, 67, 67);
+        }
+        .container{
+            width: 600px;
+            height: 400px;
+            background-color: rgb(137, 128, 128);
+            position: relative;
+            margin: 40px;
+            /* border-radius: 27px; */
+        }
+        .ball{
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border-radius: 30px;
+            background-color: rgb(245, 230, 138);
+            /* top: 340px; */
+            animation: bounceBallX 3s linear infinite alternate, bounceBallY 1s ease-out infinite alternate;
+        }
+
+        @keyframes bounceBallX {
+           from{
+               left: 0;
+           }
+           to{
+               left: 540px;
+           }
+        }
+        @keyframes bounceBallY {
+            from{
+                bottom: 0;
+            }
+            to{
+                bottom: 140px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ball"></div>
+    </div>
+</body>
+</html>
